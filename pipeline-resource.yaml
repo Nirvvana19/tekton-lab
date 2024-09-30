@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineResource
+metadata:
+  name: nodejs-source
+spec:
+  type: git
+  params:
+    - name: url
+      value: https://github.com/Nirvvana19/tekton-lab.git  # Cambia esto por la URL de tu repositorio
+    - name: revision
+      value: main  # Cambia esto si usas otra rama
